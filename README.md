@@ -42,7 +42,7 @@ when a special CPUID “leaf function” is called.
   cp -v /boot/config-5.4.0-52-generic ./.config
   <img src="pictures/picture3.png"/>
 *  Make the file - make oldconfig
-* <img src="pictures/picture4.png"/>
+   <img src="pictures/picture4.png"/>
 * make -j
 * sudo make modules
 * sudo make install
@@ -57,7 +57,7 @@ when a special CPUID “leaf function” is called.
   Set up an atomic counter at the exit locations of the vmx.c files and calculate the counts and total time spent during the exits.
 2. Complie the code using – sudo make -j && make modules && make install && make modules_install
 
-### Set up KVM
+#### Setup KVM
 1. We followed the instructions in this manual to set up the KVM in our Ubuntu 
    https://help.ubuntu.com/community/KVM/Installation
 2. In the  Installation section of the KVM guide we made use of Cosmic (18.10) or later packages.
@@ -71,7 +71,7 @@ when a special CPUID “leaf function” is called.
 2) Created new VM from Virtual Machine Manager application
 3) Created a test program and compiled it.
 
-  ### Result
+### Result
 
 1. From test program
 <img src="pictures/testing.png"/>
@@ -84,11 +84,13 @@ Verified the result
 
 ### Comment on the frequency of exits –
 
-  1. Does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? 
-  * No, the number of exits increase is not at stable rate. There are other VM instructions/operations because of which the exits are performed like EPT violation, RDRAND, I/O instruction, RDTSCP etc.
+  1. <b> Does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?</b>
 
-  2. Approximately how many exits does a full VM boot entail?
-  * The number of exits after the first build, reboot and enter nested VM using the KVM is 187,420. This is not very accurate as there might have been a shudown period and hardware interrupts in-between.
+  *  No, the number of exits increase is not at stable rate. There are other VM instructions/operations because of which the exits are performed like EPT violation, RDRAND, I/O instruction, RDTSCP etc.
+
+  1. <b>Approximately how many exits does a full VM boot entail?</b>
+
+  * The number of exits after the first build, reboot and enter nested VM using the KVM is 187,420. This is not very accurate as there might have been a shutdown period and hardware interrupts in-between.
 
 ### References
 1. https://help.ubuntu.com/community/KVM/Installation
