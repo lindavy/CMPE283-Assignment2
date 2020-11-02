@@ -71,14 +71,15 @@ when a special CPUID “leaf function” is called.
 2) Created new VM from Virtual Machine Manager application
 3) Created a test program and compiled it.
 
-  ### Result:
-3. From test program
+  ### Result
+
+1. From test program
 <img src="pictures/testing.png"/>
 
 Varified the result
 <img src="pictures/picture9.png"/>
 
-1. From host VM kern.log – tail -n20 /var/log/kern.log
+2. From host VM kern.log – tail -n20 /var/log/kern.log
 <img src="pictures/log.png"/>
 
 ### Comment on the frequency of exits –
