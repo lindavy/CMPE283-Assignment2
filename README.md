@@ -54,7 +54,7 @@ when a special CPUID “leaf function” is called.
 #### Build
 1. After the initial setup is complete modify the cpuid.c file using VS code or any other editor.
      <img src="pictures/picture8.png"/>
-  Set up an atomic counter at the exit locations of the vmx.c files and calculate the counts and total time spent during the exits.
+  Set up an atomic counter in vmx.c module to calculate the number of exits and to calculate the total time spent during the exits used rdtsc();
 2. Complie the code using – sudo make -j && make modules && make install && make modules_install
 
 #### Setup KVM
