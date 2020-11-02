@@ -37,23 +37,23 @@ when a special CPUID “leaf function” is called.
 * Install the build-essential kernel-package,  bison package (parser generator) and flex libelf-dev (parser package).
   apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev
 * uname -a
-  <img src="Pictures/picture2.png"/>
+  <img src="pictures/picture2.png"/>
 * Change the .Config file
   cp -v /boot/config-5.4.0-52-generic ./.config
-  <img src="Pictures/picture3.png"/>
+  <img src="pictures/picture3.png"/>
 *  Make the file - make oldconfig
-* <img src="Pictures/picture4.png"/>
+* <img src="pictures/picture4.png"/>
 * make -j
 * sudo make modules
 * sudo make install
 * sudo make modules_install
 * reboot
 * Verify the updated Linux version - uname -a
-  <img src="Pictures/picture7.png"/>
+  <img src="pictures/picture7.png"/>
 
 #### Build
 1. After the initial setup is complete modify the cpuid.c file using VS code or any other editor.
-     <img src="Pictures/picture8.png"/>
+     <img src="pictures/picture8.png"/>
   Set up an atomic counter at the exit locations of the vmx.c files and calculate the counts and total time spent during the exits.
 2. Complie the code using – sudo make -j && make modules && make install && make modules_install
 
@@ -73,13 +73,13 @@ when a special CPUID “leaf function” is called.
 
   ### Result:
 3. From test program
-<img src="Pictures/testing.png"/>
+<img src="pictures/testing.png"/>
 
 Varified the result
-<img src="Pictures/picture9.png"/>
+<img src="pictures/picture9.png"/>
 
 1. From host VM kern.log – tail -n20 /var/log/kern.log
-<img src="Pictures/log.png"/>
+<img src="pictures/log.png"/>
 
 ### Comment on the frequency of exits –
 
