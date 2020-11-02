@@ -76,7 +76,7 @@ when a special CPUID “leaf function” is called.
 1. From test program
 <img src="pictures/testing.png"/>
 
-Varified the result
+Verified the result
 <img src="pictures/picture9.png"/>
 
 2. From host VM kern.log – tail -n20 /var/log/kern.log
@@ -85,10 +85,12 @@ Varified the result
 ### Comment on the frequency of exits –
 
   1. <b> Does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?</b>
-  No, the number of exits increase is not at stable rate. There are other VM instructions/operations because of which the exits are performed like EPT violation, RDRAND, I/O instruction, RDTSCP etc.
+
+  *  No, the number of exits increase is not at stable rate. There are other VM instructions/operations because of which the exits are performed like EPT violation, RDRAND, I/O instruction, RDTSCP etc.
 
   1. <b>Approximately how many exits does a full VM boot entail?</b>
-    The number of exits after the first build, reboot and enter nested VM using the KVM is 187,420. This is not very accurate as there might have been a shutdown period and hardware interrupts in-between.
+
+  * The number of exits after the first build, reboot and enter nested VM using the KVM is 187,420. This is not very accurate as there might have been a shutdown period and hardware interrupts in-between.
 
 ### References
 1. https://help.ubuntu.com/community/KVM/Installation
